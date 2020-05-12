@@ -27,9 +27,6 @@ public:
         m_vecKeyLists.resize(supposed_len);
         m_uiKeyListLen = supposed_len;
     }
-    ~HashTable(){
-
-    }
     TValue &operator[](const TKey &key){
         int index = HashGenerator::GetHash(key, m_uiKeyListLen);
         for(auto& var : m_vecKeyLists[index]){
